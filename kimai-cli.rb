@@ -16,14 +16,7 @@ class KimaiCli < Formula
     venv.pip_install_and_link buildpath
 
     rm Dir["#{bin}/{kimai-complete.sh}"]
-    zsh_completion.install "bin/kimai-complete.sh"
-    (zsh_completion/"_kimai").write <<~EOS
-      _kimai () {
-        local e
-        e=$(dirname ${funcsourcetrace[1]%:*})/kimai-complete.sh
-        if [[ -f $e ]]; then source $e; fi
-      }
-    EOS
+    zsh_completion.install "bin/kimai-complete.sh" => "_kimai"
   end
 
   test do
