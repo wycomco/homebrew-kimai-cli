@@ -3,8 +3,8 @@ class KimaiCli < Formula
 
   desc "CLI for Kimai time tracking software"
   homepage "https://github.com/ksassnowski/kimai-cli"
-  url "https://github.com/ksassnowski/kimai-cli/releases/download/0.3.2/kimai-cli-0.3.2.tar.gz"
-  sha256 "60c5bf02cbc822dac04e764951ae3ebc54bcfe46507b79652608590b1aff2eb1"
+  url "https://github.com/ksassnowski/kimai-cli/releases/download/0.4.0/kimai-cli-0.4.0.tar.gz"
+  sha256 "397fef7821894f1848adf6bec8f84d705b4c78834f465733d464f6f4f5a4f9b1"
 
   depends_on "python"
 
