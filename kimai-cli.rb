@@ -3,8 +3,8 @@ class KimaiCli < Formula
 
   desc "CLI for Kimai time tracking software"
   homepage "https://github.com/ksassnowski/kimai-cli"
-  url "https://github.com/ksassnowski/kimai-cli/releases/download/0.2.0/kimai-cli-0.2.0.tar.gz"
-  sha256 "785b5d68bb431d3940c720d542332dfa7af2173a4e6e0e4ef3bc54b8968fd820"
+  url "https://github.com/ksassnowski/kimai-cli/releases/download/0.2.1/kimai-cli-0.2.1.tar.gz"
+  sha256 "3a36824171fe93286ede0638b29d160efd598a0e2bd16527389f04586cba2c57"
 
   depends_on "python"
 
@@ -14,6 +14,16 @@ class KimaiCli < Formula
                               "--ignore-installed", buildpath
     system libexec/"bin/pip", "uninstall", "-y", "kimai-cli"
     venv.pip_install_and_link buildpath
+
+    rm Dir["#{bin}/{kimai-complete.sh}"]
+    zsh_completion.install "bin/kimai-complete.sh"
+    (zsh_completion/"_kimai").write <<~EOS
+      _kimai () {
+        local e
+        e=$(dirname ${funcsourcetrace[1]%:*})/kimai-complete.sh
+        if [[ -f $e ]]; then source $e; fi
+      }
+    EOS
   end
 
   test do
