@@ -1,8 +1,8 @@
-Brew formula for https://github.com/ksassnowski/kimai-cli
+Brew formula for https://github.com/wycomco/kimai-cli
 
 # Installation
 
 ```sh
-brew tap ksassnowski/kimai-cli
+brew tap wycomco/kimai-cli
 brew install kimai-cli
 ```
