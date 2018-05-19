@@ -2,8 +2,8 @@ class KimaiCli < Formula
   include Language::Python::Virtualenv
 
   desc "CLI for Kimai time tracking software"
-  homepage "https://github.com/ksassnowski/kimai-cli"
-  url "https://github.com/ksassnowski/kimai-cli/releases/download/0.5.2/kimai-cli-0.5.2.tar.gz"
+  homepage "https://github.com/wycomco/kimai-cli"
+  url "https://github.com/wycomco/kimai-cli/releases/download/0.5.2/kimai-cli-0.5.2.tar.gz"
   sha256 "064d63638e3da891cd9e61f200042abe1b8085d337824363b8fe642243f385d3"
 
   depends_on "python"
